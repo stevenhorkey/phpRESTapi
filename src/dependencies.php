@@ -4,12 +4,12 @@
 $container = $app->getContainer();
 
 // Function added to dependency container in order to log info to ../logs/app.log for debugging.
-$container['logger'] = function($c) {
-    $logger = new \Monolog\Logger('my_logger');
-    $file_handler = new \Monolog\Handler\StreamHandler('../logs/app.log');
-    $logger->pushHandler($file_handler);
-    return $logger;
-};
+// $container['logger'] = function($c) {
+//     $logger = new \Monolog\Logger('my_logger');
+//     $file_handler = new \Monolog\Handler\StreamHandler('../logs/app.log');
+//     $logger->pushHandler($file_handler);
+//     return $logger;
+// };
 
 // Function added to dependency container in order to configure the database.
 $container['db'] = function ($c) {
